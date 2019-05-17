@@ -23,9 +23,9 @@ describe('GET', () => {
         expect(res.type).toBe('application/json')
 })
 
-    it('should return {api: running}', async () => {
-        const res = await request(server).get('/')
+    // it('should return {api: running}', async () => {
+    //     const res = await request(server).get('/')
 
-        expect(res.body).toEqual({ api: 'running' })
-    })
+    //     expect(res.body).toEqual({ api: 'running' })
+    // })
 })

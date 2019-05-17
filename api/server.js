@@ -6,7 +6,7 @@ const gamesRouter = require('../games/gamesRouter');
 const server = express();
 
 server.use(express.json());
-
+const Games = require('../games/gamesModel');
 //add gamesRouter
 server.use('/games', gamesRouter);
 
@@ -16,8 +16,8 @@ server.get('/', (req, res) => {
 });
 
 server.get('/games', async (req, res) => {
-    const rows = await Games.getAll();
+    const allGames = await Games.getAll();
   
-    res.status(200).json(rows);
+    res.status(200).json(allGames);
   });
 module.exports = server;
